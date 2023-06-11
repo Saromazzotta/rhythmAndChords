@@ -1,0 +1,116 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2709
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica-Bold;\f1\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww16340\viewh11100\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\b\fs28 \cf0 Music Lessons App 
+\f1\b0 \
+\
+GitHub Repo Link https://github.com/Saromazzotta/RhythmAndChords\
+\
+Technologies - MERN\
+\
+
+\f0\b \ul Description:
+\f1\b0 \ulnone \
+	This will be an app where you can look for lessons or teach lessons. I\'92m still working out some of the kinks for signing up as a teacher and a student. Many sites that do the same thing separate the logins and registers for teacher and student which could very well end up happening if it becomes to messy.\
+\
+As of right now the site will only allow you to take piano and drum lessons as well as teach them (to start). You\'92ll be able to see teachers on there to see what they teach and schedule a lessons and/or you\'92ll be able to make our own lessons that other users can see.\
+\
+\
+
+\f0\b \ul Features:
+\f1\b0 \ulnone \
+	-Login + Reg\
+		-Profile picture upload\
+		-First name (string)\
+		-Last name (string, optional)?\
+		-Email (string)\
+		-Password (string)\
+		-Confirm Password (string)\
+\
+		
+\f0\b -Validations for registering and login
+\f1\b0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 	-Create lesson\
+		-Instrument teaching (selector)\
+		-Pricing (Integer/float)\
+		-Availability (checkboxes of days of week)\
+		
+\f0\b -Validations
+\f1\b0 \
+\
+	-Edit created lesson\
+		-prefilled forms\
+		
+\f0\b -Validations\
+
+\f1\b0 \
+	-Delete created lesson\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+	-Schedule lesson\
+		-Choose teacher\
+		-Choose time from calendar?\
+		
+\f0\b -Validations
+\f1\b0 \
+	**Edge case: Stop a user from scheduling a lesson with himself?**\
+\
+\
+	-Edit scheduled lesson\
+		-prefilled forms\
+		
+\f0\b -Validations
+\f1\b0 \
+\
+	-Delete scheduled lesson\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 	\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\b \cf0 \ul \ulc0 Page Planning
+\f1\b0 \ulnone \
+\
+**navbar for every page**\
+\
+	Home Page\
+		- just a cool home page to make it look fun, maybe a video of someone playing music linked to the page or swipe through chords from piano api \
+		- links to sign up\
+\
+	Sign in page\
+\
+	Register page\
+		-you can choose to be both a student and teacher, will only change what front end is rendered\
+\
+	Teachers page\
+		- shows all teachers\
+		- if you try to book a lesson without being logged in, redirects to login page\
+\
+\
+	Dashboard page\
+		-shows profile picture\
+		-link to create a lesson\
+\
+		-lessons completed if student (how to track lessons taken?)\
+		-lessons taught if teacher (how to track lessons taught?)\
+\
+	Lessons pages (lessons signed up for)\
+		-edit link\
+		-delete link\
+\
+	Lessons teaching page\
+		-create lesson here
+\fs24 \
+\
+}
