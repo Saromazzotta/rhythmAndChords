@@ -20,7 +20,7 @@ const RegisterForm = () => {
 
     const submitHandler = (e) => {
         e.preventDefault();
-        axios.post("http://localhost:8000/api/users/register", userInfo, ({withCredentials: true}))
+        axios.post("http://localhost:8000/api/users/register", userInfo, {withCredentials: true})
             .then(res => {
                 console.log(res)
             })
