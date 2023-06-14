@@ -45,6 +45,9 @@ module.exports = {
             console.log(err);
             return res.status(400).json(err);
         }
+    },
+    logout: (req, res) => {
+        res.clearCookie("usertoken").json({ message: "success" });
     }
 }
 
