@@ -1,7 +1,7 @@
 import React from 'react'
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import NavBar from './NavBar'
+import LoggedInNavBar from './LoggedInNavBar';
 
 const Dashboard = () => {
     const navigate = useNavigate();
@@ -15,9 +15,15 @@ const Dashboard = () => {
     }
     return (
         <div>
-            <NavBar/>
-            <h1>Welcome!</h1>
-            <button className="btn btn-danger" onClick={logout}>Logout</button>
+            <LoggedInNavBar/>
+            <div className="row">
+                <div className="col-sm-6">
+                    <h1>Welcome!</h1>
+                </div>
+                <div className="col-sm-6">
+                    <button className="btn btn-danger" onClick={logout}>Logout</button>
+                </div>
+            </div>
         </div>
     )
 }

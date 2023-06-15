@@ -1,13 +1,14 @@
 import React from 'react'
 
-const NavBar = () => {
+
+const LoggedInNavBar = () => {
     return (
         <div>
             <nav className="nav">
                 <a href="/" className="site-title">Rhythm & Chords</a>
                 <ul>
                     <li>
-                        <a href="/teachers">Find Lessons</a>
+                        <a href="">Find Lessons</a>
                     </li>
                     <li>
                         <a href="/login">Sign In</a>
@@ -18,4 +19,4 @@ const NavBar = () => {
     )
 }
 
-export default NavBar
+export default LoggedInNavBar
