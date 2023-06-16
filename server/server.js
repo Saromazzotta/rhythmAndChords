@@ -16,6 +16,7 @@ app.use(cors({credentials: true, origin: 'http://localhost:3000'}));
 app.use(express.json(), express.urlencoded({ extended: true }));
 
 require("./routes/user.routes")(app);
+require("./routes/lesson.routes")(app);
 
 // starts up on server on 8000
 app.listen(port, () => console.log(`Listening on port: ${port}`));

@@ -24,6 +24,7 @@ const Dashboard = () => {
                     <button className="btn btn-danger" onClick={logout}>Logout</button>
                 </div>
             </div>
+            <a href="/makelesson">Make a lesson </a>
         </div>
     )
 }
