@@ -5,6 +5,7 @@ import NotFound from './components/NotFound';
 import { RegLog } from './components/RegLog';
 import LandingPage from './components/LandingPage';
 import Teachers from './components/Teachers';
+import LessonCreate from './components/LessonCreate';
 
 
 
@@ -16,6 +17,7 @@ function App() {
         <Route path="/login" element={<RegLog />} />
         <Route path="/teachers" element={<Teachers />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/lesson/create" element={<LessonCreate />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>

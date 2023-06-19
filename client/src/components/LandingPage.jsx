@@ -1,34 +1,7 @@
 import React from 'react'
-import axios from 'axios';
 import NavBar from './NavBar';
-import ImageMover from './ImageMover';
 
 const LandingPage = () => {
-
-    // const pianoApi = () => {
-    //     axios.get('https://rapidapi.com/jsdisco/api/piano-chords')
-    //         .then(res => {
-    //             console.log(res)
-    //         })
-    //         .catch(err => console.log(err))
-    // }
-
-    // const options = {
-    //     method: 'GET',
-    //     url: 'https://piano-chords.p.rapidapi.com',
-    //     headers: {
-    //         'X-RapidAPI-Key': '',
-    //         'X-RapidAPI-Host': 'piano-chords.p.rapidapi.com'
-    //     }
-    // };
-
-    // try {
-    //     const response = axios.request(options);
-    //     console.log(response.data);
-    // } catch (error) {
-    //     console.error(error);
-    // }
-
     return (
         <div>
             <NavBar />

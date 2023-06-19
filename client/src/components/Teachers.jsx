@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import NavBar from './NavBar'
+import LoggedInNavBar from './LoggedInNavBar';
+import { useParams } from 'react-router-dom';
 
 
 const Teachers = () => {
     const [lessons, setLessons] = useState([]);
+    const { id } = useParams;
 
     useEffect(() => {
         axios.get("http://localhost:8000/api/lessons")
@@ -12,27 +14,37 @@ const Teachers = () => {
             .catch(err => console.log(err));
     }, [])
 
+    const deleteLesson = (id) => {
+        axios.delete(`http://localhost:8000/api/lessons/${id}`)
+            .then(res => {
+                const filteredLessons = lessons.filter(lesson => lesson._id !== id)
+                setLessons(filteredLessons)
+            })
+            .catch(err => console.log(err))
+    }
 
 
     return (
         <div>
-            <NavBar />
+            <LoggedInNavBar />
             <div className="container">
                 <table className="table">
                     <thead>
                         <tr>
-                            <th scope="col">Name</th>
+                            <th scope="col">Instructor Name</th>
                             <th scope="col">Teaches</th>
                             <th scope='col'>Schedule</th>
+                            <th scope="col"></th>
                         </tr>
                     </thead>
                     <tbody>
                         {lessons.map((lesson, i) => {
                             return (
                                 <tr key={lesson._id}>
-                                    <td></td>
+                                    <td>{lesson.instructorName}</td>
                                     <td>{lesson.instrument}</td>
-                                    <td><a href="#">Schedule a lessons</a></td>
+                                    <td><a href="#">Schedule lesson</a></td>
+                                    <td><button className="btn btn-info" onClick={(e) => deleteLesson(lesson._id)}>Delete</button></td>
                                 </tr>
                             )
                         })}

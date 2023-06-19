@@ -1,10 +1,14 @@
 const mongoose = require("mongoose");
 
 const LessonSchema = new mongoose.Schema({
+    instructorName: {
+        type: String,
+        required: [true, "Instructor name is required"],
+    },
     instrument: {
         type: String,
         required: [true, "Instrument is required"],
-        enum: ["drums", "piano"]
+        enum: ["Drums", "Piano"]
     },
     price: {
         type: Number,
