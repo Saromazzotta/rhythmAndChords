@@ -51,5 +51,17 @@ module.exports = {
     }
 }
 
+module.exports.findOneUser = (req, res) => {
+    User.findById(req.params.id)
+        .then(oneUser => res.json({ user: oneUser }))
+        .catch(err => res.json({ message: "Something went wrong", error: err }));
+}
+
+module.exports.findAllUsers = (req, res) => {
+    User.find()
+        .then(allUsers => res.json({ users: allUsers }))
+        .catch(err => res.json({ message: "Something went wrong", error: err }));
+}
+
 
 

@@ -27,9 +27,9 @@ const LoginForm = () => {
     }
 
     return (
-        <div className="col-5 mt-3">
+        <div className="col-5 mt-3 text-white fw-bold">
             <form onSubmit={submitHandler}>
-                <h3 className="text-center fw-bold fst-italic">Login</h3>
+                <h2 className="text-center fw-bold fst-italic">Login</h2>
                 <div className="form-group">
                     <label htmlFor="" className="form-label">Email:</label>
                     <input type="email" className="form-control" name="email" value={userInfo.email} onChange={changeHandler} />
@@ -39,7 +39,7 @@ const LoginForm = () => {
                     <input type="password" className="form-control" name="password" value={userInfo.password} onChange={changeHandler} />
                 </div>
                 <div className="form-group">
-                    <button type="submit" className="btn btn-primary mt-3">Login</button>
+                    <button type="submit" className="btn btn-primary mt-3 fw-bold">Login</button>
                 </div>
             </form>
         </div>

@@ -28,7 +28,9 @@ const Teachers = () => {
         <div>
             <LoggedInNavBar />
             <div className="container">
-                <table className="table">
+                <h1 className='fw-bold text-white fst-italic text-start'>Teachers that are here to help</h1>
+                <table className="table table-striped table-hover table-borderless caption-top">
+                    <caption className='text-primary fw-bold text-decoration-underline text-end'>Lessons with professionals</caption>
                     <thead>
                         <tr>
                             <th scope="col">Instructor Name</th>
@@ -44,7 +46,7 @@ const Teachers = () => {
                                     <td>{lesson.instructorName}</td>
                                     <td>{lesson.instrument}</td>
                                     <td><a href="#">Schedule lesson</a></td>
-                                    <td><button className="btn btn-info" onClick={(e) => deleteLesson(lesson._id)}>Delete</button></td>
+                                    <td><button className="btn btn-danger" onClick={(e) => deleteLesson(lesson._id)}>Delete</button></td>
                                 </tr>
                             )
                         })}

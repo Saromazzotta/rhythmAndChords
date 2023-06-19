@@ -85,9 +85,9 @@ const RegisterForm = () => {
     
 
     return (
-        <div className="col-5 offset-1 mt-3">
+        <div className="col-5 offset-1 mt-3 text-white fw-bold">
             <form onSubmit={submitHandler}>
-                <h3 className="text-center fw-bold fst-italic">Register</h3>
+                <h2 className="text-center fw-bold fst-italic">Register</h2>
                 <div className="form-group">
                     <label htmlFor="" className="form-label">First Name:</label>
                 {/* {errors.firstName ? <p className="text-danger">{errors.firstName}</p> : ""} */}
@@ -123,7 +123,7 @@ const RegisterForm = () => {
                     </select>
                 </div>
                 <div className="form-group">
-                    <button type="submit" className="btn btn-primary mt-3">Register</button>
+                    <button type="submit" className="btn btn-primary mt-3 fw-bold">Register</button>
                 </div>
             </form>
         </div>
