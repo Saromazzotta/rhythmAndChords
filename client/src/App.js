@@ -8,6 +8,7 @@ import Teachers from './components/Teachers';
 import LessonCreate from './components/LessonCreate';
 import background from './Images/background3.jpg';
 import Footer from './components/Footer';
+import EditLesson from './components/EditLesson';
 
 
 
@@ -27,6 +28,7 @@ function App() {
         <Route path="/teachers" element={<Teachers />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/lesson/create" element={<LessonCreate />} />
+        <Route path="/lesson/edit/:id" element={<EditLesson />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

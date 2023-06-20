@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import LoggedInNavBar from './LoggedInNavBar';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
+
 
 
 const Teachers = () => {
@@ -43,10 +44,12 @@ const Teachers = () => {
                         {lessons.map((lesson, i) => {
                             return (
                                 <tr key={lesson._id}>
-                                    <td>{lesson.instructorName}</td>
+                                    <td><Link to={`/lesson/edit/${lesson._id}`}>{lesson.instructorName}</Link></td>
                                     <td>{lesson.instrument}</td>
                                     <td><a href="#">Schedule lesson</a></td>
-                                    <td><button className="btn btn-danger" onClick={(e) => deleteLesson(lesson._id)}>Delete</button></td>
+                                    <td>
+                                        <button className="btn btn-danger" onClick={(e) => deleteLesson(lesson._id)}>Delete</button>
+                                    </td>
                                 </tr>
                             )
                         })}
