@@ -66,7 +66,7 @@ const EditLesson = (props) => {
                             <input type="text" className="form-control" name="availability" value={oneLesson.availability} onChange={changeHandler} />
                         </div>
                         <div className="form-group">
-                            <button type="submit" className="btn btn-primary mt-3 fw-bold">Create</button>
+                            <button type="submit" className="btn btn-primary mt-3 fw-bold">Update</button>
                         </div>
                     </form>
                 </div>
